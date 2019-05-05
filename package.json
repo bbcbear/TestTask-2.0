@@ -1,0 +1,22 @@
+{
+  "name": "testtask",
+  "version": "2.0.0",
+  "description": "ES6 OOP version testtask projekt",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbcbear/TestTask-2.0.git"
+  },
+  "author": "bakugod and bbcbear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbcbear/TestTask-2.0/issues"
+  },
+  "homepage": "https://github.com/bbcbear/TestTask-2.0#readme"
+}
