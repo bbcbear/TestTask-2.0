@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/bbcbear/TestTask-2.0/issues"
   },
-  "homepage": "https://github.com/bbcbear/TestTask-2.0#readme"
+  "homepage": "https://github.com/bbcbear/TestTask-2.0#readme",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
 }

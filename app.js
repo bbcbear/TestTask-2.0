@@ -2,11 +2,33 @@
 *   Observ generator key statment on DB.
 *   And resolve promises from redis.  
 */
-const Redis = require('./lib/redis.js');
+const Redis = require('./lib/redis.js'),
+      Message = require('./lib/message.js')
 
 class App{
+
+    constructor (startType){
+        this.startType = startType;
+    }
     
+    start(){
+        return this.startType();
+    }
 
 }
 
-module.exports = App;
+    function generatorStrategy(params) {
+        Redis.set(Message.getMessage());
+    }
+
+    function workerStrategy(params) {
+        Redis.get();
+        Redis.set();
+    }
+
+    function errorWorkerStrategy(params) {
+        Redis.get();
+        Redis.set();
+    }
+
+module.exports = [App, generatorStrategy, workerStrategy, errorWorkerStrategy];
