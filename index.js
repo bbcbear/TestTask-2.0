@@ -2,4 +2,4 @@
 const {App, generatorStrategy} = require('./app');
 const i = new App(generatorStrategy);
 
-i.start(20);
+i.start(1);
