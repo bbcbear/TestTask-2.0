@@ -21,5 +21,9 @@
   "homepage": "https://github.com/bbcbear/TestTask-2.0#readme",
   "dependencies": {
     "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.12.0"
   }
 }
