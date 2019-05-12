@@ -22,17 +22,29 @@ class App {
 /**
      * When the state changes, does it affect the rendered appearance?
      * @param {String} text add in a return message.
-     * @return {String} Message.
      */
 function generatorStrategy(text) {
-  let i = Message.getMessage();
-  return (r.set(i));
+  // return
+  r.set(text, text).then((response)=>{
+    console.log(response);
+  }, (error)=>{
+    console.error(error);
+  });
 }
 
-function workerStrategy(_params) {
-
-  // Redis.get();
+function workerStrategy(text) {
   // Redis.set();
+  r.set(text, text).then((response)=>{
+    console.log(response);
+  }, (error)=>{
+    console.error(error);
+  });
+  // Redis.get();
+  r.get(text).then((response)=>{
+    console.log(response);
+  }, (error)=>{
+    console.error(error);
+  });
 }
 
 function errorWorkerStrategy(_params) {
@@ -42,3 +54,4 @@ function errorWorkerStrategy(_params) {
 
 exports.App = App;
 exports.generatorStrategy = generatorStrategy;
+exports.workerStrategy = workerStrategy;

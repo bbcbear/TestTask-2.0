@@ -1,5 +1,5 @@
 // here should be the code that starts the node server.
-const {App, generatorStrategy} = require('./app');
-const i = new App(generatorStrategy);
+const {App, generatorStrategy, workerStrategy} = require('./app');
+const i = new App(workerStrategy);
 
-i.start(1);
+i.start(10);
